@@ -1,79 +1,136 @@
-import React from "react";
+import React from 'react';
+import profile1 from '../assets/profile1.jpg'
+import profile2 from '../assets/profile2.jpg'
+import profile3 from '../assets/profile3.jpg'
 
-type Review = {
+
+// --- 1. TypeScript Interface ---
+interface Review {
+  id: number;
   name: string;
-  role: string;
-  avatar?: string;
-  rating?: number;
-  text: string;
-};
+  title: string;
+  quote: string;
+  rating: 1 | 2 | 3 | 4 | 5;
+  imageUrl: string;
+}
 
+// --- 2. Mock Data ---
 const reviews: Review[] = [
   {
+    id: 1,
     name: "Chinedu K.",
-    role: "Self Employed",
-    avatar: "../assets/profile1.jpg",
+    title: "Self Employed",
+    quote: "RapidLogix transformed the way we handle deliveries",
     rating: 5,
-    text: "RapidLogix transformed the way we handle deliveries",
+    imageUrl: profile1, // **IMPORTANT: UPDATE THIS PATH**
   },
   {
+    id: 2,
     name: "Mrs Blessing",
-    role: "Ara CEO",
-    avatar: "../assets/profile2.jpg",
+    title: "Ara CEO",
+    quote: "I run an e-commerce shop, and their logistics support is a lifesaver",
     rating: 5,
-    text: "I run an e-commerce shop, and their logistics support is a lifesaver",
+    imageUrl: profile2, // **IMPORTANT: UPDATE THIS PATH**
   },
   {
+    id: 3,
     name: "Mr Daniel",
-    role: "Lora Smith",
-    avatar: "../assets/profile3.jpg",
+    title: "Lora Smith",
+    quote: "Affordable, trustworthy, and efficient. They treated my Business like it was their own.",
     rating: 5,
-    text: "Affordable, trustworthy, and efficient. They treated my business like it was their own.",
+    imageUrl: profile3, // **IMPORTANT: UPDATE THIS PATH**
   },
 ];
 
-const ReviewCard: React.FC<{ r: Review }> = ({ r }) => {
+
+// --- 3. StarRating Component (Helper) ---
+interface StarRatingProps {
+  rating: 1 | 2 | 3 | 4 | 5;
+}
+
+const StarRating: React.FC<StarRatingProps> = ({ rating }) => {
+  const stars = [];
+  const maxRating = 5;
+
+  // Renders the 5 star icons, coloring them based on the 'rating' prop
+  for (let i = 1; i <= maxRating; i++) {
+    stars.push(
+      // Using a standard SVG for the star icon
+      <svg
+        key={i}
+        className={`w-6 h-6 ${i <= rating ? 'text-[#0099FF]' : 'text-gray-300'} fill-current`}
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+      >
+        <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
+      </svg>
+    );
+  }
+
+  return <div className="flex space-x-3">{stars}</div>;
+};
+
+
+// --- 4. ReviewCard Component (Helper) ---
+const ReviewCard: React.FC<{ review: Review }> = ({ review }) => {
   return (
-    <div className="bg-white shadow-md p-8">
-      <div className="flex items-center gap-6 mb-4">
-        <img
-          src={r.avatar}
-          alt={r.name}
-          className="w-26 h-26 rounded-full object-contain"
-        />
-        <div>
-          <div className="font-semibold text-lg">{r.name}</div>
-          <div className="text-sm text-[#7A7D80]">{r.role}</div>
+    <div
+      className="bg-white py-8 px-5 rounded-lg shadow-black/15 shadow-lg
+                 transition duration-300 ease-in-out hover:shadow-2xl hover:scale-[1.01] 
+                 flex flex-col transform"
+    >
+      {/* Reviewer Info (Image, Name, Title) */}
+      <div className="flex items-start space-x-6 mb-2">
+        {/* Profile Picture Fix: fixed w/h, rounded-full, object-cover */}
+        <div className="w-22 h-22 rounded-full overflow-hidden">
+          <img
+            src={review.imageUrl}
+            alt={`${review.name}'s profile`}
+            className="w-full h-full object-cover object-top" 
+          />
         </div>
-        {/* stars */}
-        <div className="ml-auto flex items-center gap-1">
-          {Array.from({ length: r.rating || 5 }).map((_, i) => (
-            <svg key={i} className="w-5 h-5 text-[#0070E0] fill-current" viewBox="0 0 20 20">
-              <path d="M10 1.5l2.6 5.27 5.8.84-4.2 4.09.99 5.78L10 15.9l-5.19 2.58.99-5.78L1.6 7.61l5.8-.84L10 1.5z" />
-            </svg>
-          ))}
+        
+        {/* Name and Title */}
+        <div className="flex flex-col gap-2 pt-1">
+          <p className="font-bold text-gray-800 text-sm">{review.name}</p>
+          <p className="text-xs text-gray-500">{review.title}</p>
+          {/* Star Rating */}
+      <div className="">
+        <StarRating rating={review.rating} />
+      </div>
         </div>
       </div>
 
-      <p className="text-[#6F7376]">{r.text}</p>
+      
+
+      {/* Quote/Testimonial */}
+      <p className="text-[#667085] text-sm leading-relaxed mt-5 mb-6">
+        {review.quote}
+      </p>
     </div>
   );
 };
 
-const Reviews: React.FC = () => {
-  return (
-    <section className="py-20 bg-white" id="reviews">
-      <div className="max-w-7xl mx-auto px-6 text-center mb-12">
-        <h2 className="text-4xl font-extrabold text-[#0056D2]">What our Client says</h2>
-      </div>
 
-      <div className="max-w-6xl mx-auto px-6 grid gap-8 md:grid-cols-3">
-        {reviews.map((r, i) => (
-          <ReviewCard r={r} key={i} />
-        ))}
+// --- 5. Main ReviewSection Component ---
+const ReviewSection: React.FC = () => {
+  return (
+    <section className="px-16 mb-15">
+      <div className="container mx-auto px-6 lg:px-8 max-w-7xl">
+        {/* Section Header */}
+        <h2 className="text-3xl lg:text-4xl font-black font-[poppins] text-center text-[#0056D2] mb-14">
+          What our Client says
+        </h2>
+
+        {/* Reviews Grid - Responsive Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {reviews.map((review) => (
+            <ReviewCard key={review.id} review={review} />
+          ))}
+        </div>
       </div>
     </section>
   );
 };
 
-export default Reviews;
+export default ReviewSection;

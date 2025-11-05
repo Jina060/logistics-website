@@ -19,7 +19,7 @@ const services = [
       "Seamless handling of bulk shipments, whether local or international, with secure transportation.",
     image: Container,
     reverse: true,
-    imgClass: "w-[380px] h-auto",
+    imgClass: "w-[800px] h-[370px] pl-7",
   },
   {
     title: "E-commerce Logistics",
@@ -27,7 +27,7 @@ const services = [
       "Tailored delivery solutions for online businesses ensuring smooth order fulfillment and happy customers.",
     image: carrier,
     reverse: false,
-    imgClass: "w-[400px] h-auto",
+    imgClass: "w-[500px] h-[390px] pl-8 pb-5",
   },
   {
     title: "Tracking & Monitoring",
@@ -35,7 +35,7 @@ const services = [
       "Get real-time updates on your shipments with GPS-enabled tracking and instant notifications.",
     image: Locationf,
     reverse: true,
-    imgClass: "w-[360px] h-auto",
+    imgClass: "w-[360px] h-auto ml-22",
   },
 ];
 
@@ -70,13 +70,10 @@ const Services: React.FC = () => {
                   : "border-t border-blue-100"
               }`}
             >
-              {/* create small gap for right border */}
-              {service.reverse && (
-                <div className="absolute right-0 top-0 w-0.5 h-6 bg-white"></div>
-              )}
+              
 
               {/* Title */}
-              <h3 className="text-3xl font-semibold font-[poppins] text-[#0056D2] mb-4 text-center pr-7">
+              <h3 className="text-3xl font-medium font-[poppins] text-[#0056D2] mb-4 text-center">
                 {service.title}
               </h3>
 
@@ -92,11 +89,13 @@ const Services: React.FC = () => {
             </div>
 
             {/* Image Section */}
-            <div className="md:w-[700px] h-[370px] bg-blue-100 rounded-br-2xl rounded-tr-2xl pr-10 pt-1">
+            <div className={`md:w-[700px] h-[370px] bg-blue-100 pr-10 pt-1
+            ${service.reverse ? "rounded-bl-2xl rounded-tl-2xl" : "rounded-br-2xl rounded-tr-2xl"}`}>
               <img
                 src={service.image}
                 alt={service.title}
-                className={`${service.imgClass} object-cover`}
+                className={`${service.imgClass} object-cover
+            }`}
               />
             </div>
           </div>

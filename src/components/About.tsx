@@ -10,7 +10,7 @@ const InfoCard: React.FC<InfoCardProps> = ({ title, body, className = "" }) => {
   return (
     <div
       className={
-        "bg-[#f0fbfb] rounded-lg py-6 px-8 text-left shadow-[0_45px_20px_0_rgba(15,105,75,0.06)]" +
+        "bg-[#f0fbfb] rounded-lg py-6 px-8 text-left shadow-xl" +
         className
       }
     >
@@ -28,7 +28,7 @@ const About: React.FC = () => {
           {/* Left headline */}
           <div>
             <p className="text-[15px] font-semibold tracking-[5px] text-[#0056D2] mb-4 pl-7">ABOUT US</p>
-            <h2 className="text-5xl font-black text-[#0056D2] leading-tight pl-7">
+            <h2 className="text-[45px] font-bold text-[#0056D2] leading-tight pl-7">
               Why Our Deals Are <br /> Best In The Market
             </h2>
           </div>
