@@ -1,4 +1,4 @@
-import React from "react";
+
 import { motion } from "framer-motion";
 import step1 from "../assets/step1.jpg";
 import step2 from "../assets/step2.png";
@@ -40,7 +40,7 @@ const Steps = () => {
   return (
     <section className="relative lg:pt-16 pt-8 overflow-hidden lg:px-20 px-6" id="steps">
       {/* Heading */}
-      <div className="text-center mb-7">
+      <div className="text-center lg:mb-7 mb-14">
         <h2 className="text-[28px] md:text-4xl 2xl:text-[45px] font-bold lg:font-black text-[#0056D2] font-[poppins]">
           Simple, Transparent, Reliable
         </h2>
@@ -133,7 +133,7 @@ const Steps = () => {
                   {step.title}
                 </h3>
               </div>
-              <p className="text-gray-600 lg:text-sm 2xl:text-[17px] text-[16px] text-center lg:pr-12 mb-2 lg:mb-0">{step.description}</p>
+              <p className="text-gray-600 lg:text-sm 2xl:text-[17px] text-[15px] text-center lg:pr-12 mb-2 lg:mb-0">{step.description}</p>
             </div>
 
             {/* Image Section */}

@@ -28,7 +28,7 @@ const CTA: React.FC = () => {
             </h2>
             
             {/* Supporting Text */}
-            <p className="text-[13px] md:text-[16px] text-[#5D5F63] lg:mb-12 mb-7 max-w-md mx-auto lg:text-wrap lg:mx-0 lg:pl-18">
+            <p className="text-[13px] md:text-[16px] text-[#5D5F63] lg:mb-12 mb-7 lg:max-w-md lg:text-wrap lg:mx-0 lg:pl-18">
               We are Ready to help you deliver that<br /> product as soon as possible
             </p>
 
@@ -47,7 +47,7 @@ const CTA: React.FC = () => {
             <img 
               src={Delivery2}
               alt="Delivery person with package, globe and plane for global logistics"
-              className="lg:relative absolute lg:bottom-0 lg:left-15 lg:w-120 w-75 left-7 -bottom-25 h-auto object-contain z-10"
+              className="lg:relative absolute lg:bottom-0 lg:left-15 lg:w-120 w-75 left-5 -bottom-25 h-auto object-contain z-10"
             />
           </div>
         </div>

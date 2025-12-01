@@ -42,7 +42,7 @@ const Header: React.FC = () => {
     <header className={headerClasses}>
       <nav 
         // Horizontal Padding Increased: px-4 (mobile), sm:px-8 (tablet), lg:px-12 (desktop)
-        className="container mx-auto px-4 sm:px-8 lg:px-22 2xl:px-30 py-7  flex items-center justify-between h-20 2xl:h-25 shadow-sm lg:shadow-xs/0"
+        className="container mx-auto px-6 sm:px-8 lg:px-22 2xl:px-30 py-7 flex items-center justify-between h-20 2xl:h-25 shadow-sm lg:shadow-xs/0"
       >
         
         {/* 1. Logo */}
@@ -98,13 +98,13 @@ const Header: React.FC = () => {
       
       {/* Backdrop Overlay */}
       <div 
-        className={`fixed inset-0 bg-black bg-opacity-50 z-1000 transition-opacity duration-300 md:hidden ${isOpen ? 'opacity-100 block' : 'opacity-0 hidden'}`}
+        className={`fixed inset-0 bg-black/55 z-1000 transition-opacity duration-300 lg:hidden ${isOpen ? 'opacity-100 block' : 'opacity-0 hidden'}`}
         onClick={() => setIsOpen(false)}
-      ></div>
+      >
 
       {/* Slide-In Menu Panel */}
       <div 
-        className={`fixed top-0 left-0 h-full w-64 bg-white shadow-xl p-6 z-1001  transform transition-transform duration-300 md:hidden ${
+        className={`fixed top-0 left-0 h-full w-64 bg-white shadow-xl p-6 z-1001 transform transition-transform duration-300 md:hidden ${
             isOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
@@ -119,7 +119,7 @@ const Header: React.FC = () => {
             </button>
         </div>
 
-        <nav className="flex flex-col space-y-3">
+        <nav className="flex flex-col space-y-3 bg-white">
           {navItems.map((item) => (
             <a
               key={item.name}
@@ -139,6 +139,7 @@ const Header: React.FC = () => {
             Get a Quote
           </button>
         </nav>
+      </div>
       </div>
     </header>
   );

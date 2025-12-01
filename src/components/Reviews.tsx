@@ -118,7 +118,7 @@ const ReviewSection: React.FC = () => {
     <section className="lg:px-16 px-4 mb-15">
       <div className="container mx-auto px-6 2xl:px-0 lg:px-8 max-w-7xl">
         {/* Section Header */}
-        <h2 className="text-[28px] lg:text-4xl 2xl:text-[40px] font-black font-[poppins] text-center text-[#0056D2] lg:mb-14 mb-10">
+        <h2 className="text-[28px] lg:text-4xl 2xl:text-[40px] font-black font-[poppins] text-center text-[#0056D2] lg:mb-14 mb-12">
           What our Clients say
         </h2>
 

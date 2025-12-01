@@ -48,13 +48,13 @@ const Services: React.FC = () => {
         <h2 className="text-3xl md:text-4xl font-black font-[poppins] text-[#0056D2]">
           Our Services
         </h2>
-        <p className="text-gray-600 mt-2 text-lg lg:text-sm">
+        <p className="text-gray-600 mt-2 text-[16px] lg:text-sm">
           Reliable solution for individuals and businesses of all sizes
         </p>
       </div>
 
       {/* Service Items */}
-      <div className="space-y-4 lg:max-w-6xl 2xl:max-w-[1300px] mx-auto px-4">
+      <div className="lg:space-y-4 space-y-7 lg:max-w-6xl 2xl:max-w-[1300px] mx-auto px-4">
         {services.map((service, index) => (
           <div
             key={index}
@@ -73,13 +73,13 @@ const Services: React.FC = () => {
               
 
               {/* Title */}
-              <h3 className="lg:text-3xl 2xl:text-4xl text-[27px] font-semibold font-[poppins] text-[#0056D2] 2xl:mb-8 mb-4 lg:text-left text-center 2xl:ml-20 lg:ml-23">
+              <h3 className="lg:text-3xl 2xl:text-4xl text-[25px] font-semibold font-[poppins] text-[#0056D2] 2xl:mb-8 mb-4 lg:text-left text-center 2xl:ml-20 lg:ml-23">
                 {service.title}
               </h3>
 
               {/* Description + Button (left-aligned but centered vertically) */}
               <div className="flex flex-col justify-center px-5 md:px-23 2xl:px-20">
-                <p className="text-[#5D5F63] lg:mb-18 mb-8 leading-7 font-[poppins] lg:text-left text-center 2xl:text-[20px] text-[17px]">
+                <p className="text-[#5D5F63] lg:mb-18 mb-8 leading-7 font-[poppins] lg:text-left text-center 2xl:text-[20px] text-[15px]">
                   {service.description}
                 </p>
                 <button className="text-[#0056D2] hover:text-black transition font-[poppins] font-medium text-center lg:text-end lg:text-sm 2xl:text-[17px]">

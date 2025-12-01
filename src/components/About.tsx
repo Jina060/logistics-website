@@ -35,7 +35,7 @@ const About: React.FC = () => {
 
           {/* Right paragraph */}
           <div className="pt-6 md:pt-12">
-            <p className="text-[#5D5F63] leading-relaxed text-[17px] 2xl:text-[20px] md:text-[18px] font-[poppins] max-w-xl">
+            <p className="text-[#5D5F63] leading-relaxed text-[15px] 2xl:text-[20px] md:text-[18px] font-[poppins] max-w-xl">
               At Rapidlogix, we’re more than a delivery service, we are your logistics
               partner, ensuring every package arrives on time with full transparency and
               security.
