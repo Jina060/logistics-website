@@ -30,7 +30,7 @@ const steps = [
     description: "On time, every time.",
     image: step3,
     reverse: false,
-    imageStyle: "h-[410px] mt-[-80px]", // balanced width for step 3
+    imageStyle: "lg:h-[410px] h-[390px] lg:mt-[-80px] mt-[-20px]", // balanced width for step 3
     spacing: "md:gap-60"
   },
 ];
@@ -38,10 +38,10 @@ const steps = [
 
 const Steps = () => {
   return (
-    <section className="relative pt-16 overflow-hidden px-20" id="steps">
+    <section className="relative lg:pt-16 pt-8 overflow-hidden lg:px-20 px-6" id="steps">
       {/* Heading */}
       <div className="text-center mb-7">
-        <h2 className="text-3xl md:text-4xl font-black text-[#0056D2] font-[poppins]">
+        <h2 className="text-[28px] md:text-4xl 2xl:text-[45px] font-bold lg:font-black text-[#0056D2] font-[poppins]">
           Simple, Transparent, Reliable
         </h2>
       </div>
@@ -50,7 +50,7 @@ const Steps = () => {
       {/* Curvy dashed connectors */}
       <section className="relative">
       <svg
-        className="hidden md:block absolute left-[730px] -translate-x-1/2 w-[90%] pointer-events-none top-[-50px] z-20"
+        className="hidden md:block absolute lg:left-[730px] 2xl:left-[800px] -translate-x-1/2 lg:w-[90%] w-full pointer-events-none lg:top-[-50px] 2xl:top-[-200px] z-20"
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 1600 1000"
@@ -79,7 +79,7 @@ const Steps = () => {
       </svg>
 
        <svg
-        className="hidden md:block absolute left-[730px] -translate-x-1/2 w-[90%] pointer-events-none top-80 z-20"
+        className="hidden md:block absolute lg:left-[730px] 2xl:left-[800px] -translate-x-1/2 lg:w-[90%] w-full pointer-events-none 2xl:top-45 lg:top-80 z-20"
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 1600 1000"
@@ -111,7 +111,7 @@ const Steps = () => {
 
 
       {/* Steps */}
-      <div className="space-y-28 max-w-6xl mx-auto px-6 relative z-10">
+      <div className="space-y-28 max-w-6xl 2xl:max-w-7xl mx-auto px-6 relative z-10">
         {steps.map((step, index) => (
           <motion.div
             key={index}
@@ -126,14 +126,14 @@ const Steps = () => {
             {/* Text Section */}
             <div className="md:w-1/2 text-center md:text-left">
               <div className="flex items-center justify-center md:justify-start mb-2">
-                <div className="bg-[#1B063E] text-white w-12 h-12 rounded-full flex items-center justify-center font-semibold text-lg mr-6 mb-5">
+                <div className="bg-[#1B063E] text-white lg:w-12 lg:h-12 w-9 h-8 rounded-full flex text-center items-center justify-center font-semibold text-sm lg:text-lg lg:mr-6 mr-4 lg:mb-5">
                   {step.number}
                 </div>
-                <h3 className="text-4xl font-medium text-[#0056D2] font-[poppins] mb-4">
+                <h3 className="lg:text-4xl text-[25px] font-medium text-[#0056D2] font-[poppins] lg:mb-4">
                   {step.title}
                 </h3>
               </div>
-              <p className="text-gray-600 text-sm text-center pr-12">{step.description}</p>
+              <p className="text-gray-600 lg:text-sm 2xl:text-[17px] text-[16px] text-center lg:pr-12 mb-2 lg:mb-0">{step.description}</p>
             </div>
 
             {/* Image Section */}

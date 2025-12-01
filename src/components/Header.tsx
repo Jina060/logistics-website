@@ -42,16 +42,16 @@ const Header: React.FC = () => {
     <header className={headerClasses}>
       <nav 
         // Horizontal Padding Increased: px-4 (mobile), sm:px-8 (tablet), lg:px-12 (desktop)
-        className="container mx-auto px-4 sm:px-8 lg:px-22 py-7 flex items-center justify-between h-20"
+        className="container mx-auto px-4 sm:px-8 lg:px-22 2xl:px-30 py-7  flex items-center justify-between h-20 2xl:h-25 shadow-sm lg:shadow-xs/0"
       >
         
         {/* 1. Logo */}
-        <div className="text-2xl font-extrabold shrink-0" style={{ color: primaryBlue }}>
+        <div className="text-2xl 2xl:text-3xl font-extrabold shrink-0" style={{ color: primaryBlue }}>
           RapidLogix
         </div>
 
         {/* 2. Desktop Navigation (Links are black by default) */}
-        <ul className="font-[poppins] hidden md:flex space-x-10 text-sm font-normal">
+        <ul className="font-[poppins] hidden md:flex space-x-10 text-sm font-normal 2xl:text-lg">
           {navItems.map(item => (
             <li key={item.name}>
               <a 
@@ -67,10 +67,10 @@ const Header: React.FC = () => {
         </ul>
 
         {/* 3. Desktop CTA & Mobile Hamburger Button Container */}
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center">
             {/* Desktop CTA Button */}
             <button 
-                className="hidden md:inline-block text-white px-8 py-3 text-sm rounded-full font-normal hover:bg-blue-700 transition-all font-[poppins]"
+                className="hidden md:inline-block text-white px-8 py-3 text-sm 2xl:text-lg rounded-full font-normal hover:bg-blue-700 transition-all font-[poppins]"
                 style={{ backgroundColor: primaryBlue }}
             >
                 Get a Quote
@@ -79,7 +79,7 @@ const Header: React.FC = () => {
             {/* Mobile Menu Button */}
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="md:hidden p-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 z-[1001]"
+                className="md:hidden p-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 z-1001"
                 aria-controls="mobile-menu"
                 aria-expanded={isOpen}
             >
@@ -98,13 +98,13 @@ const Header: React.FC = () => {
       
       {/* Backdrop Overlay */}
       <div 
-        className={`fixed inset-0 bg-black bg-opacity-50 z-[1000] transition-opacity duration-300 md:hidden ${isOpen ? 'opacity-100 block' : 'opacity-0 hidden'}`}
+        className={`fixed inset-0 bg-black bg-opacity-50 z-1000 transition-opacity duration-300 md:hidden ${isOpen ? 'opacity-100 block' : 'opacity-0 hidden'}`}
         onClick={() => setIsOpen(false)}
       ></div>
 
       {/* Slide-In Menu Panel */}
       <div 
-        className={`fixed top-0 left-0 h-full w-64 bg-white shadow-xl p-6 z-[1001] transform transition-transform duration-300 md:hidden ${
+        className={`fixed top-0 left-0 h-full w-64 bg-white shadow-xl p-6 z-1001  transform transition-transform duration-300 md:hidden ${
             isOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
       >

@@ -3,10 +3,11 @@ import Header from "../components/Header";
 import Herosection from "../components/Herosection";
 import Services from "../components/Services";
 import About from "../components/About";
-import Reviews from "../components/Reviews";
 import Steps from "../components/Steps";
+import ReviewSection from "../components/Reviews";
 import CTA from "../components/CTA";
 import Footer from "../components/Footer";
+
 
 
 const Home: React.FC = () => {
@@ -17,9 +18,10 @@ const Home: React.FC = () => {
       <Services />
       <About />
       <Steps />
-      <Reviews />
+      <ReviewSection />
       <CTA />
       <Footer />
+      
     </main>
   );
 };

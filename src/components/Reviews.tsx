@@ -58,7 +58,7 @@ const StarRating: React.FC<StarRatingProps> = ({ rating }) => {
       // Using a standard SVG for the star icon
       <svg
         key={i}
-        className={`w-6 h-6 ${i <= rating ? 'text-[#0099FF]' : 'text-gray-300'} fill-current`}
+        className={`w-6 h-6 ${i <= rating ? 'text-[#FFB641]' : 'text-gray-300'} fill-current`}
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
       >
@@ -82,7 +82,7 @@ const ReviewCard: React.FC<{ review: Review }> = ({ review }) => {
       {/* Reviewer Info (Image, Name, Title) */}
       <div className="flex items-start space-x-6 mb-2">
         {/* Profile Picture Fix: fixed w/h, rounded-full, object-cover */}
-        <div className="w-22 h-22 rounded-full overflow-hidden">
+        <div className="lg:w-22 lg:h-22 2xl:w-24 2xl:h-24 w-22 h-22 rounded-full overflow-hidden">
           <img
             src={review.imageUrl}
             alt={`${review.name}'s profile`}
@@ -92,8 +92,8 @@ const ReviewCard: React.FC<{ review: Review }> = ({ review }) => {
         
         {/* Name and Title */}
         <div className="flex flex-col gap-2 pt-1">
-          <p className="font-bold text-gray-800 text-sm">{review.name}</p>
-          <p className="text-xs text-gray-500">{review.title}</p>
+          <p className="font-bold text-gray-800 text-sm 2xl:text-[20px]">{review.name}</p>
+          <p className="text-xs text-gray-500 2xl:text-sm">{review.title}</p>
           {/* Star Rating */}
       <div className="">
         <StarRating rating={review.rating} />
@@ -104,7 +104,7 @@ const ReviewCard: React.FC<{ review: Review }> = ({ review }) => {
       
 
       {/* Quote/Testimonial */}
-      <p className="text-[#667085] text-sm leading-relaxed mt-5 mb-6">
+      <p className="text-[#667085] text-sm 2xl:text-[17px] leading-relaxed mt-5 mb-6">
         {review.quote}
       </p>
     </div>
@@ -115,11 +115,11 @@ const ReviewCard: React.FC<{ review: Review }> = ({ review }) => {
 // --- 5. Main ReviewSection Component ---
 const ReviewSection: React.FC = () => {
   return (
-    <section className="px-16 mb-15">
-      <div className="container mx-auto px-6 lg:px-8 max-w-7xl">
+    <section className="lg:px-16 px-4 mb-15">
+      <div className="container mx-auto px-6 2xl:px-0 lg:px-8 max-w-7xl">
         {/* Section Header */}
-        <h2 className="text-3xl lg:text-4xl font-black font-[poppins] text-center text-[#0056D2] mb-14">
-          What our Client says
+        <h2 className="text-[28px] lg:text-4xl 2xl:text-[40px] font-black font-[poppins] text-center text-[#0056D2] lg:mb-14 mb-10">
+          What our Clients say
         </h2>
 
         {/* Reviews Grid - Responsive Layout */}
