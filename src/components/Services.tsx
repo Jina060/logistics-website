@@ -42,9 +42,9 @@ const services = [
 const Services: React.FC = () => {
   return (
  
-    <section className="py-19 lg:px-18 px-4 bg-white" id="services">
+    <section className="py-11 lg:px-15 px-4 bg-white" id="services">
       {/* Section Heading */}
-      <div className="text-center lg:mt-24 mt-33 mb-16">
+      <div className="text-center mb-16">
         <h2 className="text-3xl md:text-4xl font-black font-[poppins] text-[#0056D2]">
           Our Services
         </h2>
@@ -79,7 +79,7 @@ const Services: React.FC = () => {
 
               {/* Description + Button (left-aligned but centered vertically) */}
               <div className="flex flex-col justify-center px-5 md:px-23 2xl:px-20">
-                <p className="text-[#5D5F63] lg:mb-18 mb-8 leading-7 font-[poppins] lg:text-left text-center 2xl:text-[20px] text-[15px]">
+                <p className="text-[#5D5F63] lg:mb-18 mb-8 leading-7 font-[poppins] lg:text-left text-center 2xl:text-[20px] text-[15  px]">
                   {service.description}
                 </p>
                 <button className="text-[#0056D2] hover:text-black transition font-[poppins] font-medium text-center lg:text-end lg:text-sm 2xl:text-[17px]">
