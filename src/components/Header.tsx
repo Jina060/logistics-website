@@ -214,6 +214,33 @@ const Header: React.FC = () => {
                 >
                   {item.name}
                 </Link>
+              ) : item.type === "page-services" ? (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  onClick={() => setIsOpen(false)}
+                  className={`text-lg font-medium ${linkTextColor} hover:text-blue-600 transition-colors py-2 border-b border-gray-100`}
+                >
+                  {item.name}
+                </Link>
+              ) : item.type === "page-pricing" ? (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  onClick={() => setIsOpen(false)}
+                  className={`text-lg font-medium ${linkTextColor} hover:text-blue-600 transition-colors py-2 border-b border-gray-100`}
+                >
+                  {item.name}
+                </Link>
+              ) : item.type === "page-contact" ? (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  onClick={() => setIsOpen(false)}
+                  className={`text-lg font-medium ${linkTextColor} hover:text-blue-600 transition-colors py-2 border-b border-gray-100`}
+                >
+                  {item.name}
+                </Link>
               ) : item.type === "page-home" ? (
                 <a
                   key={item.name}

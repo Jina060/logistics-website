@@ -4,7 +4,7 @@ import logis from "../assets/logis.png"
   
 const Herosection: React.FC = () => {
   return (
-    <section className="bg-white lg:px-22 px-4 2xl:px-30 md:mb-18">
+    <section className="bg-white lg:px-22 px-4 2xl:px-30 md:mb-18 mb-45">
       <div className="container mx-auto flex flex-col lg:flex-row items-center lg:justify-between justify-center">
         {/* Left side */}
         <div className="lg:flex-1 text-center md:text-left lg:mb-10 mt-10 mb-5 md:mb-0 lg:mt-14">
