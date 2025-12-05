@@ -54,7 +54,7 @@ const Header: React.FC = () => {
     <header className={headerClasses}>
       <nav
         // Horizontal Padding Increased: px-4 (mobile), sm:px-8 (tablet), lg:px-12 (desktop)
-        className="container mx-auto px-6 sm:px-8 lg:px-22 2xl:px-30 py-7 flex items-center justify-between h-20 2xl:h-25 shadow-sm lg:shadow-xs/0"
+        className="container mx-auto px-6 py-7 lg:px-12 flex items-center justify-between h-22 shadow-sm lg:shadow-xs/0"
       >
         {/* 1. Logo */}
         <div
@@ -65,7 +65,7 @@ const Header: React.FC = () => {
         </div>
 
         {/* 2. Desktop Navigation (Links are black by default) */}
-        <ul className="font-[poppins] hidden md:flex space-x-10 text-sm font-normal 2xl:text-lg">
+        <ul className="font-[poppins] hidden md:flex space-x-10 text-sm font-medium lg:text-[16px]">
           {navItems.map((item) => (
             <li key={item.name}>
               {item.type === "page" ? (

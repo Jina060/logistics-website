@@ -4,33 +4,33 @@ import logis from "../assets/logis.png"
   
 const Herosection: React.FC = () => {
   return (
-    <section className="bg-white lg:px-22 px-4 2xl:px-30 md:mb-18 mb-45">
+    <section className="lg:mx-12 mx-4 md:mb-18 mb-45">
       <div className="container mx-auto flex flex-col lg:flex-row items-center lg:justify-between justify-center">
         {/* Left side */}
-        <div className="lg:flex-1 text-center md:text-left lg:mb-10 mt-10 mb-5 md:mb-0 lg:mt-14">
-          <h1 className="text-[30px] md:text-5xl 2xl:text-6xl font-black text-[#0056D2] lg:tracking-tight lg:leading-15 2xl:mb-8 lg:mb-5 lg:mr-10 mb-4 leading-11 tracking-normal mx-3 lg:mx-0 2xl:mr-35 2xl:leading-20">
+        <div className="lg:flex-1 text-center md:text-left lg:mb-10 mt-10 mb-5 md:mb-0 lg:mt-10 font-[poppins]">
+          <h1 className="text-[30px] md:text-[55px] font-black text-[#0056D2] lg:tracking-tight lg:leading-19 lg:mb-5 lg:mr-30 mb-4 leading-11 tracking-normal mx-3 lg:mx-0">
             Fast & Reliable Logistics for Business & Individuals
           </h1>
-          <p className="text-gray-600 lg:text-xl text-[16px] mb-7 2xl:mb-10 mx-3 lg:mx-0 lg:leading-8 2xl:text-2xl 2xl:mr-25 2xl:leading-9">
+          <p className="text-gray-600 lg:text-[18px] text-[16px] mb-7 mx-3 md:mb-8 md:mr-16 md:ml-0 md:leading-7">
             RapidLogix helps you move goods safely, and affordably anytime,
             anywhere.
           </p>
-          <button className="bg-[#0056D2] text-white lg:px-8 px-4 py-3 rounded-full font-normal lg:text-sm 2xl:text-lg text-[14px] font-[poppins] hover:bg-blue-700 transition-all">
+          <button className="bg-[#0056D2] text-white md:px-7 md:py-4 px-4 py-3 rounded-full font-normal md:text-[16px] text-[14px] font-[poppins] hover:bg-blue-700 transition-all">
             Track Shipment
           </button>
         </div>
 
         {/* Right side */}
-        <div className="relative h-80 2xl:flex-1">
+        <div className="relative h-80 w-full lg:flex-1 lg:pt-2">
           <img
             src={plane}
             alt="Airplane"
-            className="md:w-[550px] w-170 2xl:w-230 object-contain lg:-translate-y-20 2xl:-translate-y-35 -left-1/2 lg:ml-4"
+            className="md:w-[590px] w-170 object-contain lg:-translate-y-29 -left-1/2"
           />
           <img 
           src={logis}
           alt="logis"
-          className="md:w-[500px] 2xl:w-150 mb-14 absolute lg:top-15 top-32 2xl:top-11 2xl:-ml-3 left-3/5 transform lg:-translate-x-1/2 -translate-x-60 w-150 h-auto lg:ml-1"
+          className="md:w-[520px] mb-14 absolute lg:top-11 top-32 2xl:-ml-3 left-3/5 transform lg:-translate-x-1/2 -translate-x-60 w-150 h-auto"
           />
         </div>
 
