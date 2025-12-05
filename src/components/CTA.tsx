@@ -5,8 +5,8 @@ import Delivery2 from '../assets/Delivery2.png';
 
 const CTA: React.FC = () => {
   return (
-    <section className="py-14 md:py-24 bg-gray-50 lg:mx-16 mx-4 lg:flex-row flex-col">
-      <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
+    <section className="py-14 md:py-24 bg-gray-50 lg:mx-12 mx-4 lg:flex-row flex-col">
+      <div className="container mx-auto lg:mx-0 px-4 lg:px-0 max-w-7xl">
         {/* Main CTA Container - Light Blue Background and Relative Positioning */}
         <div 
           className="bg-[#3778D733]/80 lg:rounded-4xl rounded-3xl p-8 md:p-12 lg:py-16 flex justify-between 

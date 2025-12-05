@@ -115,8 +115,8 @@ const ReviewCard: React.FC<{ review: Review }> = ({ review }) => {
 // --- 5. Main ReviewSection Component ---
 const ReviewSection: React.FC = () => {
   return (
-    <section className="lg:px-16 px-4 mb-15">
-      <div className="container mx-auto px-6 2xl:px-0 lg:px-8 max-w-7xl">
+    <section className="lg:px-0 lg:mx-12 px-4 mb-15">
+      <div className="container mx-auto lg:mx-0 px-6 lg:px-0 max-w-7xl">
         {/* Section Header */}
         <h2 className="text-[28px] lg:text-4xl 2xl:text-[40px] font-black font-[poppins] text-center text-[#0056D2] lg:mb-14 mb-12">
           What our Clients say

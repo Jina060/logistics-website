@@ -38,7 +38,7 @@ const steps = [
 
 const Steps = () => {
   return (
-    <section className="relative lg:pt-16 pt-8 overflow-hidden lg:px-20 px-6" id="steps">
+    <section className="relative lg:pt-16 pt-8 overflow-hidden lg:px-12 px-6" id="steps">
       {/* Heading */}
       <div className="text-center lg:mb-7 mb-14">
         <h2 className="text-[28px] md:text-4xl 2xl:text-[45px] font-bold lg:font-black text-[#0056D2] font-[poppins]">
@@ -50,7 +50,7 @@ const Steps = () => {
       {/* Curvy dashed connectors */}
       <section className="relative">
       <svg
-        className="hidden md:block absolute lg:left-[730px] 2xl:left-[800px] -translate-x-1/2 lg:w-[90%] w-full pointer-events-none lg:top-[-50px] 2xl:top-[-200px] z-20"
+        className="hidden md:block absolute lg:left-[730px] -translate-x-1/2 lg:w-[90%] w-full pointer-events-none lg:top-[-120px] z-20"
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 1600 1000"
@@ -79,7 +79,7 @@ const Steps = () => {
       </svg>
 
        <svg
-        className="hidden md:block absolute lg:left-[730px] 2xl:left-[800px] -translate-x-1/2 lg:w-[90%] w-full pointer-events-none 2xl:top-45 lg:top-80 z-20"
+        className="hidden md:block absolute lg:left-[740px] -translate-x-1/2 lg:w-[90%] w-full pointer-events-none lg:top-65 z-20"
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 1600 1000"
@@ -111,7 +111,7 @@ const Steps = () => {
 
 
       {/* Steps */}
-      <div className="space-y-28 max-w-6xl 2xl:max-w-7xl mx-auto px-6 relative z-10">
+      <div className="space-y-28 max-w-7xl mx-auto lg:mx-0 lg:px-0 px-6 relative z-10">
         {steps.map((step, index) => (
           <motion.div
             key={index}

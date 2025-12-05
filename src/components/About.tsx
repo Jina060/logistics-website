@@ -10,7 +10,7 @@ const InfoCard: React.FC<InfoCardProps> = ({ title, body, className = "" }) => {
   return (
     <div
       className={
-        "bg-[#f0fbfb] rounded-lg py-6 lg:px-8 px-8 2xl:px-12 2xl:pt-12" +
+        "bg-[#f0fbfb] rounded-lg py-6 lg:px-8 px-8" +
         className 
       }
     >
@@ -22,7 +22,7 @@ const InfoCard: React.FC<InfoCardProps> = ({ title, body, className = "" }) => {
 
 const About: React.FC = () => {
   return (
-    <section className="lg:py-4 py-2 lg:mx-22 mx-8 mb-10 bg-white" id="about">
+    <section className="lg:py-4 py-2 lg:mx-12 mx-8 mb-10 bg-white" id="about">
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 mb-12">
           {/* Left headline */}

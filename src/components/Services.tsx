@@ -42,7 +42,7 @@ const services = [
 const Services: React.FC = () => {
   return (
  
-    <section className="py-11 lg:px-15 px-4 bg-white" id="services">
+    <section className="py-11 lg:px-12 px-4 bg-white" id="services">
       {/* Section Heading */}
       <div className="text-center mb-16">
         <h2 className="text-3xl md:text-4xl font-black font-[poppins] text-[#0056D2]">
@@ -54,7 +54,7 @@ const Services: React.FC = () => {
       </div>
 
       {/* Service Items */}
-      <div className="lg:space-y-4 space-y-7 lg:max-w-6xl 2xl:max-w-[1300px] mx-auto px-4">
+      <div className="lg:space-y-4 space-y-7 lg:max-w-6xl 2xl:max-w-[1300px] mx-auto lg:px-0 lg:mx-0 px-4">
         {services.map((service, index) => (
           <div
             key={index}
@@ -89,7 +89,7 @@ const Services: React.FC = () => {
             </div>
 
             {/* Image Section */}
-            <div className={`md:w-[700px] lg:h-[370px] 2xl:h-[430px] h-[260px] bg-blue-100 lg:pr-8 pt-1
+            <div className={`md:w-[700px] lg:h-[370px] h-[260px] bg-blue-100 lg:pr-8 pt-1
             ${service.reverse ? "lg:rounded-tl-2xl lg:rounded-bl-2xl lg:rounded-tr-none rounded-tl-2xl rounded-tr-2xl" : "lg:rounded-br-2xl lg:rounded-tr-2xl lg:rounded-tl-none rounded-tl-2xl rounded-tr-2xl"}`}>
               <img
                 src={service.image}
