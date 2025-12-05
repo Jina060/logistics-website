@@ -54,11 +54,11 @@ const Header: React.FC = () => {
     <header className={headerClasses}>
       <nav
         // Horizontal Padding Increased: px-4 (mobile), sm:px-8 (tablet), lg:px-12 (desktop)
-        className="container mx-auto px-6 py-7 lg:px-12 flex items-center justify-between h-22 shadow-sm lg:shadow-xs/0"
+        className="container mx-auto px-6 py-7 lg:px-12 lg:py-8 lg:mx-0 flex items-center h-22 shadow-sm justify-between lg:shadow-xs/0"
       >
         {/* 1. Logo */}
         <div
-          className="text-2xl 2xl:text-3xl font-extrabold shrink-0"
+          className="text-2xl 2xl:text-3xl font-extrabold shrink-0 text-start"
           style={{ color: primaryBlue }}
         >
           RapidLogix
