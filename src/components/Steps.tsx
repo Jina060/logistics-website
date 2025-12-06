@@ -48,9 +48,9 @@ const Steps = () => {
 
       
       {/* Curvy dashed connectors */}
-      <section className="relative">
+      <section className="relative w-full">
       <svg
-        className="hidden md:block absolute lg:left-[730px] -translate-x-1/2 lg:w-[90%] w-full pointer-events-none lg:top-[-120px] z-20"
+        className="hidden md:block absolute lg:left-[730px] -translate-x-1/2 lg:w-[90%] pointer-events-none lg:top-[-120px] z-20"
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 1600 1000"

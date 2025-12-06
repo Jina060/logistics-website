@@ -1,20 +1,18 @@
 import React from "react";
-import Header from "../components/Header";
-import Herosection from "../components/Herosection";
 import Services from "../components/Services";
 import About from "../components/About";
 import Steps from "../components/Steps";
 import ReviewSection from "../components/Reviews";
 import CTA from "../components/CTA";
 import Footer from "../components/Footer";
+import Wrapped from "../components/wrapped";
 
 
 
 const Home: React.FC = () => {
   return (
     <main id='top'>
-      <Header />
-      <Herosection />
+      <Wrapped />
       <Services />
       <About />
       <Steps />

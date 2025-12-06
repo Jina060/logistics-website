@@ -4,8 +4,8 @@ import logis from "../assets/logis.png"
   
 const Herosection: React.FC = () => {
   return (
-    <section className="lg:mx-12 mx-4 md:mb-18 mb-45">
-      <div className="container mx-auto flex flex-col lg:flex-row items-center lg:justify-between justify-center">
+    <section className="md:mb-18 mb-45">
+      <div className="flex flex-col lg:flex-row items-center lg:justify-between justify-center lg:px-16 px-4">
         {/* Left side */}
         <div className="lg:flex-1 text-center md:text-left lg:mb-10 mt-10 mb-5 md:mb-0 lg:mt-10 font-[poppins]">
           <h1 className="text-[30px] md:text-[55px] font-black text-[#0056D2] lg:tracking-tight lg:leading-19 lg:mb-5 lg:mr-30 mb-4 leading-11 tracking-normal mx-3 lg:mx-0">
@@ -25,7 +25,7 @@ const Herosection: React.FC = () => {
           <img
             src={plane}
             alt="Airplane"
-            className="md:w-[590px] w-170 object-contain lg:-translate-y-29 -left-1/2"
+            className="md:w-[600px] w-170 object-contain lg:-translate-y-29 -left-1/2 ml-2"
           />
           <img 
           src={logis}

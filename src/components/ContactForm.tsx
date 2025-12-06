@@ -82,7 +82,7 @@ export default function ContactForm() {
         >
           Send Us a Message
         </motion.h2>
-        <motion.p
+        <motion.p 
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
